@@ -67,6 +67,12 @@ Sentence: “42”
 Sentence: “?!!!!!!?"
 Sentence: "42?!!!!!?"
 ```
+## ***Examples***
+- Valid
+<img src="valid.png" alt="Alt text">
+- Invalid
+<img src="invalid.png" alt="Alt text">
+
 ## ***Future Problems***
 - I tried to train the model on some other languages you provided and I found that if the language has some English characters it will classify it wrongly as English and the model F1-Score was 0.34 (Max), and if the language is non-Latin it will classify it as Arabic. That is why I thought I need to use a transformer or just the embedding layer of a pre-trained model but it will make the classification task very hard and will not be accurate too in addition it will take more than 0.5 sec and the model will not be light weighted. so that I concentrated on how to make the classification task simple and fast with a light weight model.
 
