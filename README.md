@@ -69,7 +69,7 @@ Sentence: "42?!!!!!?"
 ```
 ## ***Examples***
 - Valid
-![valid](https://github.com/osamashaaban/Translation-App/assets/63675685/04c0c615-d055-4585-a49c-26e9ad9f55ba)
+![valid](https://github.com/osamashaaban/Translation-App/assets/63675685/55677280-b347-4e76-8e24-97865a0ff756)
 - Invalid
 ![invalid](https://github.com/osamashaaban/Translation-App/assets/63675685/3a46d10a-36f9-4c80-86a7-d6b798313179)
 
