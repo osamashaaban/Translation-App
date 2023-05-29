@@ -4,7 +4,7 @@ import requests
 import json
 import time
 
-
+# Define regext patterns
 english_pattern = re.compile(r'\b[A-Za-z]+\b')
 arabic_pattern = re.compile(r'[أبجدهـوزحطيكلمنسعفصقرشتثخذضظؤاإءئةى]')
 
@@ -17,17 +17,22 @@ matches_en = re.findall(english_pattern, blog)
 matches_ar = re.findall(arabic_pattern, blog)
 detect = st.button("Detect Language")
 
+# If the blog not detected make the langusge session state = None
 if "language" not in st.session_state:
     st.session_state["language"] = None
     
 if detect:
+    # Make sure that the inputted sentence is valid - Just English or Arabic
     if (((len(matches_en) > 0) and (len(matches_ar) == 0)) or ((len(matches_en) == 0) and (len(matches_ar) > 0))):
         data = json.dumps({"text":blog})
+        # Make matches empty for the next blog
         matches_en = []
         matches_ar = []
         start_time = time.time()
+        # Send prediction request to detection model
         response = requests.post(url="http://127.0.0.1:8050/text",data=data)
         end_time = time.time()
+        # Calculate time of prediction
         inference_time = end_time - start_time
         st.session_state["language"] = response.json()
         st.caption("Response Time: " + str(round(inference_time,6)))
