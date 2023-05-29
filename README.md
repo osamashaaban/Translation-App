@@ -69,9 +69,9 @@ Sentence: "42?!!!!!?"
 ```
 ## ***Examples***
 - Valid
-<img src="valid.png" alt="Alt text">
+![valid](https://github.com/osamashaaban/Translation-App/assets/63675685/04c0c615-d055-4585-a49c-26e9ad9f55ba)
 - Invalid
-<img src="invalid.png" alt="Alt text">
+![invalid](https://github.com/osamashaaban/Translation-App/assets/63675685/3a46d10a-36f9-4c80-86a7-d6b798313179)
 
 ## ***Future Problems***
 - I tried to train the model on some other languages you provided and I found that if the language has some English characters it will classify it wrongly as English and the model F1-Score was 0.34 (Max), and if the language is non-Latin it will classify it as Arabic. That is why I thought I need to use a transformer or just the embedding layer of a pre-trained model but it will make the classification task very hard and will not be accurate too in addition it will take more than 0.5 sec and the model will not be light weighted. so that I concentrated on how to make the classification task simple and fast with a light weight model.
